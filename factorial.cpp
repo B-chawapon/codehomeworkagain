@@ -12,7 +12,7 @@ double nrfac(long long int k,long long int l);
 int main()
 {
     scanf("%lld",&a);   
-    if(a>=1)
+    if(a>=1 && a<=25)
     {
         if(a%2==0)
         {

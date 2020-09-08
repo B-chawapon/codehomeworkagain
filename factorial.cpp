@@ -1,54 +1,62 @@
 #include<stdio.h>
-    long long int temp;
     long long int a,r,nminusr;
-    long long int i;
-    long long int n=1;
-    long long int ncr=1;
-    long long int rn=1;
-    long long int num[20];
-long long int nfac(long long int k);
-long long int rfac(long long int k);
-long long int nrfac(long long int k,long long int l);
+    double i;
+    double n=1;
+    double ncr=1;
+    double rn=1;
+    double num[20];
+double nfac(long long int k);
+double rfac(long long int k);
+double nrfac(long long int k,long long int l);
 
 int main()
 {
-    scanf("%lld %lld",&a,&r);   
-   
+    scanf("%lld",&a);   
+    if(a>=1)
+    {
+        if(a%2==0)
+        {
+            r=a/2;
+        }
+        else
+        {
+            a=a+1;
+            r=a/2;
+        }
+    }
    nfac(a);
    nrfac(a,r);
    rfac(r);
-    printf("%lld\n",n);
-     printf("%lld\n",ncr);
-      printf("%lld\n",r);
-    printf("%lld\n",n/(ncr*rn));
+   
+    printf("%.0lf\n",n/(ncr*rn));
 
     return 0;
 }
-long long int nfac(long long int k)
+double nfac(long long int k)
 {
   
     for(i=1;i<=a;i++)
     {
-        num[i]=i;
-        n*=num[i];
+  
+        n*=i;
     }
     return n;
 }
-long long int nrfac(long long int k,long long int l)
+double nrfac(long long int k,long long int l)
 {
     for(i=1;i<=a-r;i++)
    {
-       num[i]=i;
-        ncr*=num[i];
+       
+        ncr*=i;
    }
    return ncr;
 }
-long long int rfac(long long int k)
+double rfac(long long int k)
 {
     for(i=1;i<=r;i++)
    {
-       num[i]=i;
-        rn*=num[i];
+
+        rn*=i;
    }
    return rn;
 }

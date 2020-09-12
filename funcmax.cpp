@@ -11,9 +11,12 @@ int checkmax(int x)
     max=num[0];
   for(i=0;i<=10;i++)
   {
-      if(num[i]>max)
+      if(num[i]>=max)
       {
+        if(num[i]>max)
+        {
           max=num[i];
+        }
       }
   }
   return max;

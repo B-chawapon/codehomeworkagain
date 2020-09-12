@@ -11,23 +11,9 @@ int checkmax(int x)
     max=num[0];
   for(i=0;i<=10;i++)
   {
-      if(num[i]>=max)
+      if(num[i]>max)
       {
-          if(num[i]==max)
-          {
-              max=num[i];
-          }
-          else
-          {
-              max=num[i];
-          }
-      }
-      else
-      {
-          a=i-1;
-          //printf("%d",max);
-          num[a]=max;
-          break;
+          max=num[i];
       }
   }
   return max;
@@ -41,7 +27,5 @@ int main()
     }
     checkmax(max);
     printf("%d",max);
-
-
-    return 0;
+return 0;
 }

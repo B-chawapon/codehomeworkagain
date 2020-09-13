@@ -65,10 +65,10 @@
 					right=t;
 	                
 	            }
-				printf("%d ",front); 
+				
 	        }
 		
-           
+           printf("%d ",front); 
 	    }
 	   
     return 0;

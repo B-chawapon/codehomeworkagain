@@ -1,12 +1,12 @@
-#include"stdio.h"
-int q=1,w=1,s=0,year,wdie,sdie;
+#include<stdio.h>
+int q=1,w=1,s=0;
+int year,wdie,sdie;
 int worker[24];
 int total[24];
 int i;
 int main()
 {
-   
-    do
+   do
     {
         scanf("%d",&year);
         if(year>=1 && year<=24)
@@ -22,7 +22,6 @@ int main()
                 s-=sdie;
                 worker[i]=w;
                 total[i]=q+w+s;
-                
                 if(i==year)
                 {
                     printf("%d %d\n",worker[i],total[i]);
@@ -33,8 +32,8 @@ int main()
         {
             break;
         }
+        
     } while (1);
-    
-	return 0;
+    return 0;
 }
     

@@ -1,0 +1,1 @@
+ sum[i]+=arr[i][j].score[j];

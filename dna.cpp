@@ -4,16 +4,16 @@ char dna1[201];
 char dna2[201];
 int i;
 int j=0;
-int sum=0;
+
 int temp=0;
-int count,check=0;
+int count,sum=0;
 int a,b=0;
 int main()
 {
     scanf("%s",dna1);
     scanf("%s",dna2);
 
-    for(i=0;i<=200;i++)
+    /*for(i=0;i<=200;i++)
     {
         if(dna1[i]!='\0')
         {
@@ -28,7 +28,7 @@ int main()
           printf("%c",dna2[i]); 
         }
     }
-     printf("\n");
+     printf("\n");*/
     for(i=0;i<=200 && dna1[i]!='\0';i++)
     {
         temp=i;
@@ -37,24 +37,24 @@ int main()
             if(dna1[temp]==dna2[j])
             {
                 //printf("%d",j);
-                check+=1;
+                sum+=1;
                 temp+=1;
-                if(check>count)
+                if(sum>count)
                 {
-                    count=check;
+                    count=sum;
                     a=i;
                     b=temp-1;
                 }
                 if(dna1[temp]!=dna2[j+1])
                 {
                     temp=i;
-                    check=0;
+                    sum=0;
                 }
             }
 
 
         }
-        check=0;
+        sum=0;
     i=temp;
     }
     for(;a<=b;a++)

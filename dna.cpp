@@ -6,6 +6,8 @@ int i;
 int j=0;
 int sum=0;
 int temp=0;
+int count,check=0;
+int a,b=0;
 int main()
 {
     scanf("%s",dna1);
@@ -34,19 +36,30 @@ int main()
         {
             if(dna1[temp]==dna2[j])
             {
-                printf("%d",j);
-                sum+=1;
+                //printf("%d",j);
+                check+=1;
                 temp+=1;
+                if(check>count)
+                {
+                    count=check;
+                    a=i;
+                    b=temp-1;
+                }
                 if(dna1[temp]!=dna2[j+1])
                 {
                     temp=i;
+                    check=0;
                 }
             }
 
 
         }
-
+        check=0;
+    i=temp;
     }
-    printf("%d",sum);
+    for(;a<=b;a++)
+    {
+        printf("%c",dna1[a]);
+    }
     return 0;
 }

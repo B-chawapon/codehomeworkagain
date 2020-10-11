@@ -12,23 +12,6 @@ int main()
 {
     scanf("%s",dna1);
     scanf("%s",dna2);
-
-    /*for(i=0;i<=200;i++)
-    {
-        if(dna1[i]!='\0')
-        {
-           printf("%c",dna1[i]);
-        }
-    }
-    printf(" ");
-    for(i=0;i<=200;i++)
-    {
-        if(dna2[i]!='\0')
-        {
-          printf("%c",dna2[i]); 
-        }
-    }
-     printf("\n");*/
     for(i=0;i<=200 && dna1[i]!='\0';i++)
     {
         temp=i;
